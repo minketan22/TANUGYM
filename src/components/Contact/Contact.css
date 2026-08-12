@@ -57,6 +57,32 @@
   font-style: normal;
 }
 
+.directions-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #ff6a00;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.directions-link:hover {
+  color: #ff7d1a;
+}
+
+.map-card {
+  background: #1b222c;
+  padding: 12px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.map-card iframe {
+  width: 100%;
+  min-height: 280px;
+  border: 0;
+  border-radius: 14px;
+}
+
 /* Right Side */
 
 .contact-form {

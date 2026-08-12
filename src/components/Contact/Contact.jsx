@@ -8,7 +8,7 @@ import {
   FaClock,
 } from "react-icons/fa";
 
-const WHATSAPP_NUMBER = "917858913382"; // Replace with your WhatsApp number in international format without '+' or leading zeros
+const WHATSAPP_NUMBER = "918950855815"; // WhatsApp expects the number without '+' or spaces
 
 const initialForm = {
   name: "",
@@ -18,10 +18,12 @@ const initialForm = {
 };
 
 const contactDetails = {
-  address: "Mullana, Ambala, Haryana 133203",
-  phone: "+91 98765 43210",
+  address: "Tanu Gym, M. M. University, Mullana, M. M. International School Road, Mullana, Haryana 133203",
+  phone: "+91 8950855815",
   email: "info@tanugym.com",
   hours: "Mon - Sat : 6 AM - 10 PM",
+  googleMapsLink:
+    "https://www.google.com/maps/dir/?api=1&destination=Tanu%20Gym%2C%20M.%20M.%20University%2C%20Mullana%2C%20M.%20M.%20International%20School%20Road%2C%20Mullana%2C%20Haryana%20133203",
 };
 
 function Contact() {
@@ -121,6 +123,14 @@ function Contact() {
             <div>
               <h3>Address</h3>
               <address>{contactDetails.address}</address>
+              <a
+                href={contactDetails.googleMapsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="directions-link"
+              >
+                Get Directions
+              </a>
             </div>
           </div>
 
@@ -146,6 +156,15 @@ function Contact() {
               <h3>Working Hours</h3>
               <p>{contactDetails.hours}</p>
             </div>
+          </div>
+
+          <div className="map-card" data-aos="fade-up" data-aos-delay="320">
+            <iframe
+              title="TanuGym location on Google Maps"
+              src="https://www.google.com/maps?q=Tanu%20Gym%2C%20M.%20M.%20University%2C%20Mullana%2C%20M.%20M.%20International%20School%20Road%2C%20Mullana%2C%20Haryana%20133203&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
 
         </div>

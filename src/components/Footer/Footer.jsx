@@ -73,7 +73,7 @@ function Footer() {
 
           <p>
             <FaPhoneAlt />
-            +91 98765 43210
+            +91 8950855815
           </p>
 
           <p>
@@ -83,7 +83,7 @@ function Footer() {
 
           <p>
             <FaMapMarkerAlt />
-            Mullana, Ambala, Haryana 133203
+             M. M. University Road, Mullana, Ambala, Haryana 133203
           </p>
         </div>
       </div>

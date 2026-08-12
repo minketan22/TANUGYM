@@ -14,7 +14,7 @@ const seoConfig = {
   twitterTitle: "TanuGym | Gym & Fitness Center in Mullana, Ambala",
   twitterDescription:
     "Train smarter with TanuGym through strength training, cardio, yoga, and personal coaching in Mullana, Ambala.",
-  phone: "+91 98765 43210",
+  phone: "+91 8950855815",
   email: "info@tanugym.com",
   address: {
     streetAddress: "Mullana",
