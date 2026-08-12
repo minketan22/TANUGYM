@@ -33,7 +33,7 @@ const benefits = [
   "Makes exercise fun",
 ];
 
-const KidZone = () => {
+function KidZone() {
   return (
     <section className="kidzone" id="kidzone">
       <div className="kidzone-container">
@@ -52,7 +52,7 @@ const KidZone = () => {
           </p>
         </div>
 
-        {/* Main Section */}
+        {/* Main Content */}
         <div className="kidzone-main">
 
           {/* Left Content */}
@@ -128,11 +128,13 @@ const KidZone = () => {
             </div>
 
             <div className="floating-kid-card card-top">
-              ⭐ <span>Build Confidence</span>
+              <span>⭐</span>
+              <span>Build Confidence</span>
             </div>
 
             <div className="floating-kid-card card-bottom">
-              💪 <span>Stay Active</span>
+              <span>💪</span>
+              <span>Stay Active</span>
             </div>
 
           </div>
@@ -184,6 +186,6 @@ const KidZone = () => {
       </div>
     </section>
   );
-};
+}
 
 export default KidZone;

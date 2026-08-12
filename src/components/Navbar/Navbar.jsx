@@ -7,11 +7,12 @@ const links = [
   { name: "About", id: "about" },
   { name: "Programs", id: "programs" },
   { name: "Trainers", id: "trainers" },
+  { name: "KidZone", id: "KidZone" },
   { name: "Pricing", id: "pricing" },
   { name: "Testimonials", id: "testimonials" },
   { name: "Gallery", id: "gallery" },
   { name: "Contact", id: "contact" },
-  { name: "KidZone", id: "KidZone" },
+  
 ];
 
 function Navbar({ gymName }) {
