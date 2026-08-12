@@ -11,6 +11,7 @@ const links = [
   { name: "Testimonials", id: "testimonials" },
   { name: "Gallery", id: "gallery" },
   { name: "Contact", id: "contact" },
+  { name: "KidZone", id: "KidZone" },
 ];
 
 function Navbar({ gymName }) {

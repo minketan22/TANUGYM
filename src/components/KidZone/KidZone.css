@@ -1,0 +1,748 @@
+/* =========================================
+   KIDZONE SECTION
+========================================= */
+
+.kidzone {
+  position: relative;
+  padding: 110px 0;
+  background: #1b222a;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.kidzone-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+/* Decorative background glow */
+.kidzone::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  top: -180px;
+  right: -180px;
+  background: rgba(255, 92, 0, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.kidzone::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  bottom: -180px;
+  left: -150px;
+  background: rgba(255, 92, 0, 0.05);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.kidzone-header {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.kidzone-tag {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 8px 18px;
+  border: 1px solid rgba(255, 92, 0, 0.4);
+  border-radius: 50px;
+  background: rgba(255, 92, 0, 0.08);
+  color: #ff5c00;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.kidzone-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.kidzone-header h2 span {
+  color: #ff5c00;
+}
+
+.kidzone-header p {
+  max-width: 650px;
+  margin: 25px auto 0;
+  color: #aeb5bd;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.kidzone-main {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.kidzone-content {
+  max-width: 560px;
+}
+
+.kidzone-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding: 10px 18px;
+  background: #202831;
+  border: 1px solid #303943;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.kidzone-badge > span {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: #ff5c00;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 17px;
+}
+
+.kidzone-badge strong {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.kidzone-badge small {
+  display: block;
+  margin-top: 2px;
+  color: #8f99a3;
+  font-size: 11px;
+}
+
+.kidzone-content h3 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.kidzone-content h3 span {
+  color: #ff5c00;
+}
+
+.kidzone-description {
+  margin-bottom: 30px;
+  color: #aeb5bd;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.kidzone-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 25px;
+  margin-bottom: 35px;
+}
+
+.kid-benefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d4d8dc;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.benefit-check {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ff5c00;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.kidzone-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 20px;
+  background: #ff5c00;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #ff5c00;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.kidzone-btn span {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+  color: #ff5c00;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.kidzone-btn:hover {
+  background: #e95200;
+  border-color: #e95200;
+  transform: translateY(-3px);
+}
+
+.kidzone-btn:hover span {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   RIGHT VISUAL
+========================================= */
+
+.kidzone-visual {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kidzone-circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-one {
+  width: 430px;
+  height: 430px;
+  background: rgba(255, 92, 0, 0.08);
+  border: 1px solid rgba(255, 92, 0, 0.2);
+}
+
+.circle-two {
+  width: 330px;
+  height: 330px;
+  border: 2px dashed rgba(255, 92, 0, 0.3);
+}
+
+/* =========================================
+   MAIN KID CARD
+========================================= */
+
+.kidzone-card-main {
+  position: relative;
+  z-index: 2;
+  width: 330px;
+  padding: 45px 35px;
+  text-align: center;
+  background: #202831;
+  color: #ffffff;
+  border: 1px solid #303943;
+  border-radius: 25px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+  transform: rotate(-3deg);
+  transition: transform 0.4s ease;
+}
+
+.kidzone-card-main:hover {
+  transform: rotate(0deg) translateY(-5px);
+}
+
+.kidzone-emoji {
+  width: 95px;
+  height: 95px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 92, 0, 0.12);
+  border: 1px solid rgba(255, 92, 0, 0.3);
+  border-radius: 50%;
+  font-size: 48px;
+}
+
+.kidzone-card-main h4 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.kidzone-card-main p {
+  max-width: 230px;
+  margin: 0 auto 30px;
+  color: #9ea7b0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   STATS
+========================================= */
+
+.kidzone-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #343d46;
+}
+
+.kidzone-stats strong {
+  display: block;
+  color: #ff5c00;
+  font-size: 20px;
+}
+
+.kidzone-stats span {
+  color: #8f99a3;
+  font-size: 11px;
+}
+
+/* =========================================
+   FLOATING CARDS
+========================================= */
+
+.floating-kid-card {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 18px;
+  background: #252e38;
+  color: #ffffff;
+  border: 1px solid #39434e;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.floating-kid-card span {
+  color: #ffffff;
+}
+
+.card-top {
+  top: 55px;
+  right: 5px;
+  transform: rotate(5deg);
+}
+
+.card-bottom {
+  bottom: 50px;
+  left: 5px;
+  transform: rotate(-5deg);
+}
+
+/* =========================================
+   ACTIVITIES SECTION
+========================================= */
+
+.kidzone-activities {
+  position: relative;
+  z-index: 1;
+  margin-top: 120px;
+}
+
+.activities-heading {
+  margin-bottom: 35px;
+}
+
+.activities-heading span {
+  color: #ff5c00;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.activities-heading h3 {
+  margin: 8px 0 0;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+/* =========================================
+   ACTIVITY CARDS
+========================================= */
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.activity-card {
+  position: relative;
+  min-height: 230px;
+  padding: 30px 25px;
+  background: #202831;
+  border: 1px solid #2d3741;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 92, 0, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.activity-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  background: rgba(255, 92, 0, 0.12);
+  border: 1px solid rgba(255, 92, 0, 0.25);
+  border-radius: 12px;
+  font-size: 27px;
+}
+
+.activity-card h4 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.activity-card p {
+  margin: 0;
+  color: #929ca6;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.activity-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  color: #66717c;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.activity-card:hover .activity-arrow {
+  color: #ff5c00;
+  transform: translate(3px, -3px);
+}
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.kidzone-bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 80px;
+  padding: 35px 40px;
+  background: #202831;
+  border: 1px solid #303943;
+  border-radius: 18px;
+  color: #ffffff;
+}
+
+.kidzone-bottom > div span {
+  color: #ff5c00;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.kidzone-bottom h3 {
+  max-width: 600px;
+  margin: 8px 0 0;
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 1.3;
+}
+
+.kidzone-bottom-btn {
+  flex-shrink: 0;
+  padding: 14px 22px;
+  background: #ff5c00;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #ff5c00;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+
+.kidzone-bottom-btn:hover {
+  background: #e95200;
+  border-color: #e95200;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .kidzone {
+    padding: 90px 0;
+  }
+
+  .kidzone-main {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .kidzone-content {
+    max-width: 700px;
+  }
+
+  .kidzone-visual {
+    min-height: 450px;
+  }
+
+  .activities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .kidzone {
+    padding: 75px 0;
+  }
+
+  .kidzone-container {
+    width: 90%;
+  }
+
+  .kidzone-header {
+    margin-bottom: 50px;
+  }
+
+  .kidzone-header h2 {
+    font-size: 43px;
+    letter-spacing: -2px;
+  }
+
+  .kidzone-header p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .kidzone-tag {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .kidzone-content h3 {
+    font-size: 38px;
+    letter-spacing: -1.5px;
+  }
+
+  .kidzone-description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .kidzone-benefits {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .kid-benefit {
+    font-size: 13px;
+  }
+
+  /* Visual */
+  .kidzone-visual {
+    min-height: 390px;
+  }
+
+  .circle-one {
+    width: 310px;
+    height: 310px;
+  }
+
+  .circle-two {
+    width: 250px;
+    height: 250px;
+  }
+
+  .kidzone-card-main {
+    width: 270px;
+    padding: 35px 25px;
+  }
+
+  .kidzone-emoji {
+    width: 75px;
+    height: 75px;
+    font-size: 38px;
+  }
+
+  .kidzone-card-main h4 {
+    font-size: 25px;
+  }
+
+  .kidzone-card-main p {
+    font-size: 13px;
+  }
+
+  /* Floating cards */
+  .floating-kid-card {
+    padding: 10px 13px;
+    font-size: 10px;
+  }
+
+  .card-top {
+    top: 35px;
+    right: -5px;
+  }
+
+  .card-bottom {
+    bottom: 30px;
+    left: -5px;
+  }
+
+  /* Activities */
+  .kidzone-activities {
+    margin-top: 85px;
+  }
+
+  .activities-heading h3 {
+    font-size: 29px;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .activity-card {
+    min-height: 200px;
+    padding: 25px 22px;
+  }
+
+  /* Bottom CTA */
+  .kidzone-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 23px;
+    margin-top: 60px;
+  }
+
+  .kidzone-bottom h3 {
+    font-size: 21px;
+  }
+
+  .kidzone-bottom-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+  .kidzone {
+    padding: 65px 0;
+  }
+
+  .kidzone-container {
+    width: 92%;
+  }
+
+  .kidzone-header h2 {
+    font-size: 37px;
+  }
+
+  .kidzone-content h3 {
+    font-size: 33px;
+  }
+
+  .kidzone-visual {
+    min-height: 350px;
+  }
+
+  .circle-one {
+    width: 270px;
+    height: 270px;
+  }
+
+  .circle-two {
+    width: 220px;
+    height: 220px;
+  }
+
+  .kidzone-card-main {
+    width: 240px;
+    padding: 30px 20px;
+  }
+
+  .kidzone-card-main h4 {
+    font-size: 23px;
+  }
+
+  .floating-kid-card {
+    font-size: 9px;
+    padding: 9px 11px;
+  }
+
+  .card-top {
+    right: -8px;
+  }
+
+  .card-bottom {
+    left: -8px;
+  }
+}

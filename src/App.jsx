@@ -10,6 +10,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Gallery from "./components/Gallery/Gallery";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import KidZone from "./components/KidZone/KidZone";
 import SeoManager from "./components/SEO/SeoManager";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -60,6 +61,7 @@ function App() {
         <Testimonials />
         <Gallery />
         <Contact />
+        <KidZone />
       </main>
       <Footer />
     </>
