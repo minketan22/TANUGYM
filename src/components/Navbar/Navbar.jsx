@@ -6,19 +6,20 @@ const links = [
   { name: "Home", id: "home" },
   { name: "About", id: "about" },
   { name: "Programs", id: "programs" },
+  { name: "KidZone", id: "kidzone" },
   { name: "Trainers", id: "trainers" },
-  { name: "KidZone", id: "KidZone" },
   { name: "Pricing", id: "pricing" },
   { name: "Testimonials", id: "testimonials" },
   { name: "Gallery", id: "gallery" },
   { name: "Contact", id: "contact" },
-  
+ 
 ];
 
 function Navbar({ gymName }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
+  /* Lock body scroll when mobile menu is open */
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
 
@@ -27,6 +28,7 @@ function Navbar({ gymName }) {
     };
   }, [menuOpen]);
 
+  /* Close mobile menu when screen becomes desktop */
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 767) {
@@ -41,10 +43,11 @@ function Navbar({ gymName }) {
     };
   }, []);
 
+  /* Detect active section while scrolling */
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 140;
-      let currentSection = links[0].id;
+      const scrollPosition = window.scrollY + 180;
+      let currentSection = "home";
 
       links.forEach((link) => {
         const section = document.getElementById(link.id);
@@ -62,21 +65,59 @@ function Navbar({ gymName }) {
     };
 
     handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  /* Smooth scroll to section */
+  const handleNavClick = (event, id) => {
+    event.preventDefault();
+
+    const section = document.getElementById(id);
+
+    if (!section) {
+      console.warn(`Section with id "${id}" was not found.`);
+      return;
+    }
+
+    setActiveSection(id);
+    setMenuOpen(false);
+
+    const navbarHeight = 75;
+
+    const sectionPosition =
+      section.getBoundingClientRect().top +
+      window.scrollY -
+      navbarHeight;
+
+    window.scrollTo({
+      top: sectionPosition,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header>
       <nav aria-label="Primary">
         <div className="nav-container">
-          <a className="logo" href="#home" aria-label={`${gymName} home`}>
+
+          {/* Logo */}
+          <a
+            className="logo"
+            href="#home"
+            aria-label={`${gymName} home`}
+            onClick={(event) => handleNavClick(event, "home")}
+          >
             {gymName}
           </a>
 
+          {/* Navigation Links */}
           <ul
             id="mobile-navigation"
             className={`nav-links ${menuOpen ? "active" : ""}`}
@@ -85,11 +126,12 @@ function Navbar({ gymName }) {
               <li key={link.id}>
                 <a
                   href={`#${link.id}`}
-                  className={activeSection === link.id ? "active" : ""}
-                  onClick={() => {
-                    setActiveSection(link.id);
-                    setMenuOpen(false);
-                  }}
+                  className={
+                    activeSection === link.id ? "active" : ""
+                  }
+                  onClick={(event) =>
+                    handleNavClick(event, link.id)
+                  }
                 >
                   {link.name}
                 </a>
@@ -97,23 +139,37 @@ function Navbar({ gymName }) {
             ))}
           </ul>
 
-          <a className="join-btn" href="#contact">
+          {/* Join Button */}
+          <a
+            className="join-btn"
+            href="#contact"
+            onClick={(event) =>
+              handleNavClick(event, "contact")
+            }
+          >
             Join Now
           </a>
 
+          {/* Mobile Menu */}
           <button
             type="button"
             className="menu-icon"
-            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={
+              menuOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+            }
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setMenuOpen((prev) => !prev)}
           >
             {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
+
         </div>
       </nav>
     </header>
   );
 }
+
 export default Navbar;

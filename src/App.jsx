@@ -4,13 +4,14 @@ import Hero from "./components/Hero/Hero";
 import Stats from "./components/Stats/Stats";
 import About from "./components/About/About";
 import Programs from "./components/Programs/Programs";
+import KidZone from "./components/KidZone/KidZone";
 import Trainers from "./components/Trainers/Trainers";
 import Pricing from "./components/Pricing/Pricing";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Gallery from "./components/Gallery/Gallery";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import KidZone from "./components/KidZone/KidZone";
+
 import SeoManager from "./components/SEO/SeoManager";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -56,12 +57,13 @@ function App() {
         <Stats />
         <About />
         <Programs />
+        <KidZone />
         <Trainers />
         <Pricing />
         <Testimonials />
         <Gallery />
         <Contact />
-        <KidZone />
+       
       </main>
       <Footer />
     </>
