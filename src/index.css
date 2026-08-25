@@ -92,6 +92,14 @@ textarea {
   font: inherit;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #ff9b61;
+  outline-offset: 4px;
+}
+
 @media (max-width: 991px) {
   :root {
     --nav-height: 72px;

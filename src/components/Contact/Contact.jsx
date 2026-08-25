@@ -6,7 +6,10 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaClock,
+  FaWhatsapp,
 } from "react-icons/fa";
+import branchMainImage from "../../assets/images/gallery5.jpg";
+import branchSecondImage from "../../assets/images/gallery6.jpg";
 
 const WHATSAPP_NUMBER = "918950855815"; // WhatsApp expects the number without '+' or spaces
 
@@ -20,11 +23,34 @@ const initialForm = {
 const contactDetails = {
   address: "Tanu Gym, M. M. University, Mullana, M. M. International School Road, Mullana, Haryana 133203",
   phone: "+91 8950855815",
-  email: "info@tanugym.com",
-  hours: "Mon - Sat : 6 AM - 10 PM",
+  email: "tanugym555@gmail.com",
+  hours: "Morning 5 - 9 AM | Evening 4 - 9 PM",
   googleMapsLink:
-    "https://www.google.com/maps/dir/?api=1&destination=Tanu%20Gym%2C%20M.%20M.%20University%2C%20Mullana%2C%20M.%20M.%20International%20School%20Road%2C%20Mullana%2C%20Haryana%20133203",
+    "https://www.google.com/maps/place/30%C2%B015'11.5%22N+77%C2%B002'46.4%22E/@30.2532005,77.0436592,770m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d30.2532005!4d77.0462341?hl=en&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D",
+  mapEmbedLink:
+    "https://www.google.com/maps?q=30.2532005,77.0462341&z=17&output=embed",
 };
+
+const branches = [
+  {
+    name: "TANU GYM MULLANA Branch 2",
+    address: contactDetails.address,
+    maps: contactDetails.googleMapsLink,
+    phone: contactDetails.phone,
+    hours: contactDetails.hours,
+    image: branchMainImage,
+    description: "Our flagship training floor with expert coaching and a focused community.",
+  },
+  {
+    name: "TANU GYM SAHA Branch 3",
+    address: "Contact our team for the latest branch address and availability.",
+    maps: contactDetails.googleMapsLink,
+    phone: contactDetails.phone,
+    hours: contactDetails.hours,
+    image: branchSecondImage,
+    description: "A convenient TANU GYM space designed to keep your training consistent.",
+  },
+];
 
 function Contact() {
   const [formData, setFormData] = useState(initialForm);
@@ -70,7 +96,7 @@ function Contact() {
     }
 
     const whatsappMessage = [
-      "Hello TanuGym, I would like to enquire about joining.",
+      "Hello TANU GYM, I would like to enquire about joining.",
       "",
       `Name: ${trimmedForm.name}`,
       `Email: ${trimmedForm.email}`,
@@ -160,8 +186,8 @@ function Contact() {
 
           <div className="map-card" data-aos="fade-up" data-aos-delay="320">
             <iframe
-              title="TanuGym location on Google Maps"
-              src="https://www.google.com/maps?q=Tanu%20Gym%2C%20M.%20M.%20University%2C%20Mullana%2C%20M.%20M.%20International%20School%20Road%2C%20Mullana%2C%20Haryana%20133203&output=embed"
+              title="TANU GYM location on Google Maps"
+              src={contactDetails.mapEmbedLink}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
@@ -176,7 +202,7 @@ function Contact() {
           data-aos="fade-up"
           data-aos-delay="120"
           onSubmit={handleSubmit}
-          aria-label="Send a WhatsApp enquiry to TanuGym"
+          aria-label="Send a WhatsApp enquiry to TANU GYM"
         >
           <label className="sr-only" htmlFor="contact-name">
             Your name
@@ -244,6 +270,33 @@ function Contact() {
 
         </form>
 
+      </div>
+
+      <div className="branches" id="branches" aria-labelledby="branches-title">
+        <div className="branches-heading">
+          <span>FIND YOUR TRAINING HOME</span>
+          <h2 id="branches-title">Two branches.<br />One stronger community.</h2>
+          <p>Choose the TANU GYM location that fits your routine and start training with us.</p>
+        </div>
+
+        <div className="branch-grid">
+        {branches.map((branch, index) => (
+          <article className="branch-card" key={branch.name} data-aos="fade-up" data-aos-delay={index * 90}>
+            <div className="branch-image-wrap">
+              <img src={branch.image} alt={`${branch.name} gym interior`} />
+              <span className="branch-label">BRANCH {index + 1}</span>
+            </div>
+            <div className="branch-content">
+              <h3>{branch.name}</h3>
+              <p className="branch-description">{branch.description}</p>
+              <div className="branch-detail"><FaMapMarkerAlt /><address>{branch.address}</address></div>
+              <div className="branch-detail"><FaClock /><p>{branch.hours}</p></div>
+              <div className="branch-detail"><FaPhoneAlt /><a href={`tel:${branch.phone.replace(/\s/g, "")}`}>{branch.phone}</a></div>
+              <div className="branch-actions"><a className="branch-map" href={branch.maps} target="_blank" rel="noopener noreferrer">View on Google Maps</a><a className="branch-whatsapp" href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer"><FaWhatsapp /> WhatsApp</a></div>
+            </div>
+          </article>
+        ))}
+        </div>
       </div>
 
     </section>

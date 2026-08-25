@@ -8,6 +8,7 @@ import KidZone from "./components/KidZone/KidZone";
 import Trainers from "./components/Trainers/Trainers";
 import Pricing from "./components/Pricing/Pricing";
 import Testimonials from "./components/Testimonials/Testimonials";
+import Transformations from "./components/Transformations/Transformations";
 import Gallery from "./components/Gallery/Gallery";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -51,7 +52,7 @@ function App() {
       <a className="skip-link" href="#main-content">
         Skip to main content
       </a>
-      <Navbar gymName="TanuGym" />
+      <Navbar gymName="TANU GYM" />
       <main id="main-content">
         <Hero />
         <Stats />
@@ -61,6 +62,7 @@ function App() {
         <Trainers />
         <Pricing />
         <Testimonials />
+        <Transformations />
         <Gallery />
         <Contact />
        

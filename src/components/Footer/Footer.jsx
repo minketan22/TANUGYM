@@ -18,8 +18,16 @@ function Footer() {
   ];
 
   const socialLinks = [
-    { name: "Instagram", url: "", icon: <FaInstagram /> },
-    { name: "Facebook", url: "", icon: <FaFacebookF /> },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/tanugymmmdu?igsi=MWN5NHZieWtmeXhodQ%3D%3D&utm_source=qr",
+      icon: <FaInstagram />,
+    },
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/tanu.gym",
+      icon: <FaFacebookF />,
+    },
     { name: "LinkedIn", url: "", icon: <FaLinkedinIn /> },
     { name: "YouTube", url: "", icon: <FaYoutube /> },
   ];
@@ -28,12 +36,13 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <p className="footer-brand-name">TanuGym</p>
+          <div className="footer-brand-lockup">
+            <p className="footer-brand-name">TANU GYM</p>
+            <span>Luxury <b>·</b> Strength <b>·</b> Discipline</span>
+          </div>
 
           <p>
-            Train Smarter.
-            <br />
-            Become Stronger.
+            Your fitness journey starts here.
           </p>
 
           <div className="social-icons">
@@ -78,7 +87,7 @@ function Footer() {
 
           <p>
             <FaEnvelope />
-            info@tanugym.com
+            tanugym555@gmail.com
           </p>
 
           <p>
@@ -89,7 +98,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>(c) 2026 TanuGym. All Rights Reserved.</p>
+        <p>(c) 2026 TANU GYM. All Rights Reserved.</p>
       </div>
     </footer>
   );

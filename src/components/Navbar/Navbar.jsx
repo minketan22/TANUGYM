@@ -5,14 +5,11 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const links = [
   { name: "Home", id: "home" },
   { name: "About", id: "about" },
-  { name: "Programs", id: "programs" },
-  { name: "KidZone", id: "kidzone" },
-  { name: "Trainers", id: "trainers" },
-  { name: "Pricing", id: "pricing" },
-  { name: "Testimonials", id: "testimonials" },
-  { name: "Gallery", id: "gallery" },
+  { name: "Services", id: "programs" },
+  { name: "Plans", id: "pricing" },
+  { name: "Transformations", id: "transformations" },
+  { name: "Branches", id: "branches" },
   { name: "Contact", id: "contact" },
- 
 ];
 
 function Navbar({ gymName }) {
@@ -114,7 +111,8 @@ function Navbar({ gymName }) {
             aria-label={`${gymName} home`}
             onClick={(event) => handleNavClick(event, "home")}
           >
-            {gymName}
+            <span className="logo-name">{gymName}</span>
+            <span className="logo-tagline">Luxury <b>·</b> Strength <b>·</b> Discipline</span>
           </a>
 
           {/* Navigation Links */}

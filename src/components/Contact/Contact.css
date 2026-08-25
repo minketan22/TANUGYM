@@ -83,6 +83,47 @@
   border-radius: 14px;
 }
 
+.branches {
+  margin-top: 85px;
+}
+
+.branches-heading {
+  max-width: 590px;
+  margin-bottom: 35px;
+}
+
+.branches-heading span { color: #ff6a00; font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px; }
+.branches-heading h2 { margin-top: 12px; color: #fff; font-size: 2.5rem; line-height: 1.15; }
+.branches-heading p { margin-top: 15px; color: #aeb6c2; }
+.branch-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+.branch-card { padding: 0; overflow: hidden; border: 1px solid #353e4b; border-radius: 18px; background: #202934; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+.branch-card:hover { transform: translateY(-8px); border-color: rgba(255, 106, 0, 0.7); box-shadow: 0 18px 38px rgba(0, 0, 0, 0.25); }
+.branch-image-wrap { position: relative; height: 235px; overflow: hidden; }
+.branch-image-wrap::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(10, 13, 17, 0.78)); }
+.branch-image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.branch-card:hover .branch-image-wrap img { transform: scale(1.05); }
+.branch-image-wrap .branch-label { position: absolute; z-index: 1; bottom: 18px; left: 22px; color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; }
+.branch-content { padding: 25px 26px 28px; }
+.branch-card h3 { margin: 0; color: #fff; font-size: 1.4rem; }
+.branch-description { min-height: 48px; margin: 9px 0 20px; color: #aeb6c2; font-size: 0.92rem; }
+.branch-detail { display: flex; align-items: flex-start; gap: 12px; margin-top: 14px; color: #cbd1d9; font-size: 0.9rem; }
+.branch-detail svg { flex: 0 0 auto; margin-top: 3px; color: #ff6a00; }
+.branch-detail address, .branch-detail p { color: inherit; font-style: normal; line-height: 1.5; }
+.branch-detail a { color: inherit; text-decoration: none; }
+.branch-detail a:hover { color: #ff914d; }
+.branch-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+.branch-actions a { display: inline-flex; align-items: center; gap: 7px; padding: 11px 14px; border-radius: 7px; font-size: 0.85rem; font-weight: 700; text-decoration: none; }
+.branch-map { background: #ff6a00; color: #fff; }
+.branch-map:hover { background: #ff7d1a; }
+.branch-whatsapp { border: 1px solid #31c778; color: #62e09a; }
+.branch-whatsapp:hover { background: #31c778; color: #101a15; }
+
+@media (max-width: 767px) {
+  .branch-grid { grid-template-columns: 1fr; }
+  .branches-heading h2 { font-size: 2rem; }
+  .branch-image-wrap { height: 210px; }
+}
+
 /* Right Side */
 
 .contact-form {

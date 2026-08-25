@@ -42,10 +42,10 @@ const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 
 const manifestContent = JSON.stringify(
   {
-    name: "TanuGym",
-    short_name: "TanuGym",
+    name: "TANU GYM",
+    short_name: "TANU GYM",
     description:
-      "TanuGym gym and fitness center in Mullana, Ambala with training, yoga, and wellness programs.",
+      "TANU GYM gym and fitness center in Mullana, Ambala with training, yoga, and wellness programs.",
     start_url: "/",
     display: "standalone",
     background_color: "#1d232a",

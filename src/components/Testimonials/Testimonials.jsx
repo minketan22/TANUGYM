@@ -13,7 +13,7 @@ function Testimonials() {
       name: "Rahul Sharma",
       duration: "Member for 2 Years",
       review:
-        "Joining TanuGym completely changed my lifestyle. The trainers are supportive and the environment is motivating.",
+        "Joining TANU GYM completely changed my lifestyle. The trainers are supportive and the environment is motivating.",
       rating: 5,
     },
     {

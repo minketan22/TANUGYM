@@ -24,14 +24,14 @@ function About() {
       <div className="about-image">
         <img
           src={aboutImage}
-          alt="Personal trainer guiding members through a strength workout at TanuGym"
+          alt="Personal trainer guiding members through a strength workout at TANU GYM"
         />
       </div>
 
       <div className="about-content" data-aos="fade-up">
 
         <span className="about-subtitle"> 
-          WHY CHOOSE TANUGYM
+          WHY CHOOSE TANU GYM
         </span>
 
         <h2 id="about-title">
@@ -41,9 +41,16 @@ function About() {
         </h2>
 
         <p>
-          We provide expert coaching, world-class equipment,
-          and customized fitness programs to help you achieve
-          your goals faster.
+          TANU GYM was built to make serious fitness welcoming and practical
+          for the Mullana community. From a first workout to a complete
+          transformation, our team pairs expert coaching with a consistent,
+          supportive environment.
+        </p>
+
+        <p>
+          Our vision is simple: help every member train with purpose, feel
+          stronger and build habits that last. With two branches, we are
+          growing a local fitness community without losing personal attention.
         </p>
 
         <div className="feature-list">
@@ -58,8 +65,9 @@ function About() {
         </div>
 
         <Button
-          text="Join Today"
+          text="Meet the TANU GYM Team"
           variant="primary"
+          href="#trainers"
         />
 
       </div>

@@ -12,27 +12,27 @@ function Gallery() {
   const images = [
     {
       src: gallery1,
-      alt: "TanuGym gym floor with modern resistance machines",
+      alt: "TANU GYM gym floor with modern resistance machines",
     },
     {
       src: gallery2,
-      alt: "Members training with free weights at TanuGym",
+      alt: "Members training with free weights at TANU GYM",
     },
     {
       src: gallery3,
-      alt: "Cardio workout area inside TanuGym gym",
+      alt: "Cardio workout area inside TANU GYM gym",
     },
     {
       src: gallery4,
-      alt: "Strength training session led by a coach at TanuGym",
+      alt: "Strength training session led by a coach at TANU GYM",
     },
     {
       src: gallery5,
-      alt: "Functional fitness space for group workouts at TanuGym",
+      alt: "Functional fitness space for group workouts at TANU GYM",
     },
     {
       src: gallery6,
-      alt: "Clean and spacious workout environment at TanuGym gym",
+      alt: "Clean and spacious workout environment at TANU GYM gym",
     },
   ];
 

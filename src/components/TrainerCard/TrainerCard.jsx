@@ -21,7 +21,7 @@ function TrainerCard({
 
       <img
         src={image}
-        alt={`${name}, ${role} at TanuGym`}
+        alt={`${name}, ${role} at TANU GYM`}
       />
 
       <h3>{name}</h3>

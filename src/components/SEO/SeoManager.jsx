@@ -2,20 +2,20 @@ import { useEffect } from "react";
 import logoImage from "../../assets/logo.png";
 
 const seoConfig = {
-  title: "TanuGym | Gym & Fitness Center in Mullana, Ambala",
+  title: "TANU GYM | Luxury. Strength. Discipline.",
   description:
-    "TanuGym is a modern gym in Mullana, Ambala offering strength training, cardio, yoga, personal training, and fitness coaching to help you build a stronger, healthier lifestyle.",
+    "TANU GYM is a modern gym in Mullana, Ambala offering strength training, cardio, yoga, personal training, and fitness coaching to help you build a stronger, healthier lifestyle.",
   keywords:
-    "TanuGym, gym in Mullana, gym in Ambala, fitness center Haryana, personal training, strength training, cardio classes, yoga classes, local gym near me",
-  author: "TanuGym",
-  ogTitle: "TanuGym | Gym & Fitness Center in Mullana, Ambala",
+    "TANU GYM, gym in Mullana, gym in Ambala, fitness center Haryana, personal training, strength training, cardio classes, yoga classes, local gym near me",
+  author: "TANU GYM",
+  ogTitle: "TANU GYM | Gym & Fitness Center in Mullana, Ambala",
   ogDescription:
-    "Join TanuGym for expert coaching, modern equipment, personalized fitness plans, and motivating gym experiences in Mullana, Ambala.",
-  twitterTitle: "TanuGym | Gym & Fitness Center in Mullana, Ambala",
+    "Join TANU GYM for expert coaching, modern equipment, personalized fitness plans, and motivating gym experiences in Mullana, Ambala.",
+  twitterTitle: "TANU GYM | Gym & Fitness Center in Mullana, Ambala",
   twitterDescription:
-    "Train smarter with TanuGym through strength training, cardio, yoga, and personal coaching in Mullana, Ambala.",
+    "Train smarter with TANU GYM through strength training, cardio, yoga, and personal coaching in Mullana, Ambala.",
   phone: "+91 8950855815",
-  email: "info@tanugym.com",
+  email: "tanugym555@gmail.com",
   address: {
     streetAddress: "Mullana",
     addressLocality: "Ambala",
@@ -23,8 +23,8 @@ const seoConfig = {
     postalCode: "133203",
     addressCountry: "IN",
   },
-  openingHours: ["Mo-Sa 06:00-22:00"],
-  priceRange: "INR 999 - INR 2999",
+  openingHours: ["Mo-Sa 05:00-09:00", "Mo-Sa 16:00-21:00"],
+  priceRange: "INR 1500 - INR 10000",
 };
 
 const ensureTag = (selector, createTag) => {
@@ -87,7 +87,7 @@ function SeoManager() {
     setMetaContent(
       'meta[property="og:site_name"]',
       { property: "og:site_name" },
-      "TanuGym"
+      "TANU GYM"
     );
     setMetaContent(
       'meta[property="og:title"]',
@@ -112,7 +112,7 @@ function SeoManager() {
     setMetaContent(
       'meta[property="og:image:alt"]',
       { property: "og:image:alt" },
-      "TanuGym gym logo"
+      "TANU GYM gym logo"
     );
     setMetaContent(
       'meta[property="og:locale"]',
@@ -142,7 +142,7 @@ function SeoManager() {
     setMetaContent(
       'meta[name="twitter:image:alt"]',
       { name: "twitter:image:alt" },
-      "TanuGym gym logo"
+      "TANU GYM gym logo"
     );
 
     const canonical = ensureTag('link[rel="canonical"]', () => {
@@ -156,7 +156,7 @@ function SeoManager() {
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        name: "TanuGym",
+        name: "TANU GYM",
         url: siteOrigin,
         description: seoConfig.description,
       },
@@ -164,7 +164,7 @@ function SeoManager() {
         "@context": "https://schema.org",
         "@type": "ExerciseGym",
         "@id": `${siteOrigin}/#tanugym`,
-        name: "TanuGym",
+        name: "TANU GYM",
         image: imageUrl,
         url: canonicalUrl,
         telephone: seoConfig.phone,

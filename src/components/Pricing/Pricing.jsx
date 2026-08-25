@@ -2,46 +2,49 @@ import "./Pricing.css";
 import Button from "../Button/Button";
 import { FaCheckCircle } from "react-icons/fa";
 
+const whatsappMembershipLink =
+  "https://wa.me/918950855815?text=Hello%20TANU%20GYM%2C%20I%20would%20like%20to%20enquire%20about%20membership.";
+
 function Pricing() {
   const plans = [
     {
-      name: "Basic",
-      price: "INR 999",
-      duration: "/month",
+      name: "Monthly",
+      price: "INR 1500",
+      duration: "/ month",
       popular: false,
       features: [
         "Gym Access",
-        "Locker Facility",
-        "Free Water",
-        "Basic Support",
+        "Gym floor access",
+        "Trainer guidance",
+        "Progress check-ins",
       ],
     },
     {
-      name: "Premium",
-      price: "INR 1999",
-      duration: "/month",
+      name: "Quarterly",
+      price: "Enquire",
+      duration: "3 months",
       popular: true,
       features: [
         "Gym Access",
-        "Personal Trainer",
-        "Diet Plan",
-        "Locker Facility",
-        "Priority Support",
+        "All gym access",
+        "Fitness assessment",
+        "Priority support",
       ],
     },
     {
-      name: "Elite",
-      price: "INR 2999",
-      duration: "/month",
+      name: "Half Yearly",
+      price: "INR 6000",
+      duration: "/ 6 months",
       popular: false,
       features: [
-        "Everything in Premium",
-        "24/7 Gym Access",
-        "Recovery Sessions",
-        "Nutrition Consultation",
-        "VIP Support",
+        "Best-value membership",
+        "Structured workout plan",
+        "Nutrition guidance",
+        "Regular progress reviews",
       ],
     },
+    { name: "Yearly", price: "INR 10000", duration: "/ year", popular: false, features: ["Full gym access", "Goal planning", "Member benefits", "Long-term coaching"] },
+    { name: "Personal Training", price: "Enquire", duration: "one-to-one", popular: false, features: ["Dedicated trainer", "Custom workouts", "Technique coaching", "Accountability"] },
   ];
 
   return (
@@ -87,7 +90,11 @@ function Pricing() {
               ))}
             </ul>
 
-            <Button text="Join Now" variant="primary" />
+            <Button
+              text="Enquire on WhatsApp"
+              variant="primary"
+              href={whatsappMembershipLink}
+            />
           </article>
         ))}
       </div>

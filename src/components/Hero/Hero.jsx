@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section id="home" className="hero" aria-labelledby="hero-title">
       <div className="hero-content">
-        <p className="hero-kicker">TanuGym in Mullana, Ambala</p>
+        <p className="hero-kicker">Your fitness journey starts here</p>
 
         <h1 id="hero-title">
           Transform Your Body <br />
@@ -31,7 +31,7 @@ function Hero() {
       <div className="hero-image">
         <img
           src={heroImage}
-          alt="TanuGym members training with modern strength and cardio equipment"
+          alt="TANU GYM members training with modern strength and cardio equipment"
         />
       </div>
     </section>

@@ -1,5 +1,5 @@
 import "./Programs.css";
-import { FaDumbbell, FaRunning, FaSpa, FaHeartbeat } from "react-icons/fa";
+import { FaDumbbell, FaRunning, FaChild, FaHeartbeat, FaUserCheck, FaFire } from "react-icons/fa";
 
 function Programs() {
   const programs = [
@@ -11,21 +11,33 @@ function Programs() {
     },
     {
       icon: <FaRunning />,
-      title: "Cardio Training",
+      title: "Cardio",
       description:
         "Boost endurance and burn calories with high-energy workouts.",
     },
     {
-      icon: <FaSpa />,
-      title: "Yoga Classes",
+      icon: <FaHeartbeat />,
+      title: "Functional Training",
       description:
-        "Improve flexibility, balance and mental wellness every day.",
+        "Move better, build stability and train for real-world strength.",
     },
     {
-      icon: <FaHeartbeat />,
-      title: "CrossFit",
+      icon: <FaUserCheck />,
+      title: "Personal Training",
       description:
-        "High-intensity functional workouts to improve strength and endurance.",
+        "One-to-one coaching, accountability and a plan built around you.",
+    },
+    {
+      icon: <FaFire />,
+      title: "Weight Loss / Muscle Building",
+      description:
+        "Goal-focused training and nutrition guidance for measurable progress.",
+    },
+    {
+      icon: <FaChild />,
+      title: "Kids Fitness / Karate",
+      description:
+        "Active, confidence-building sessions for children, where applicable.",
     },
   ];
 

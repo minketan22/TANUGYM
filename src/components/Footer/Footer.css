@@ -15,10 +15,16 @@
 
 .footer-brand-name {
   color: #ff6a00;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
   transition: 0.3s;
 }
+
+.footer-brand-lockup > span { color: #9ca5b2; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+.footer-brand-lockup b { color: #ff6a00; }
+.footer-brand-lockup { margin-bottom: 20px; }
 
 .footer-brand p {
   color: #bdbdbd;
