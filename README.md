@@ -159,4 +159,4 @@ This project helped me strengthen my understanding of:
 
 ## 📄 License
 
-This project is created for learning, portfolio, and demonstration purposes.
+This project is created for real gym client.

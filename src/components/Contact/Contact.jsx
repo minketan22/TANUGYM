@@ -33,18 +33,20 @@ const contactDetails = {
 
 const branches = [
   {
-    name: "TANU GYM MULLANA Branch 2",
+    name: "TANU GYM MULLANA",
     address: contactDetails.address,
-    maps: contactDetails.googleMapsLink,
+    maps: "https://maps.app.goo.gl/iKGsas1QJ1RsmJnx9",
+    label: "BRANCH 2",
     phone: contactDetails.phone,
     hours: contactDetails.hours,
     image: branchMainImage,
     description: "Our flagship training floor with expert coaching and a focused community.",
   },
   {
-    name: "TANU GYM SAHA Branch 3",
+    name: "TANU GYM SAHA",
     address: "Contact our team for the latest branch address and availability.",
-    maps: contactDetails.googleMapsLink,
+    maps: "https://www.google.com/maps/place/30%C2%B017'51.4%22N+76%C2%B058'07.4%22E/@30.2976074,76.966137,769m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d30.2976074!4d76.9687119?hl=en&entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D",
+    label: "BRANCH 3",
     phone: contactDetails.phone,
     hours: contactDetails.hours,
     image: branchSecondImage,
@@ -127,6 +129,36 @@ function Contact() {
       data-aos="fade-up"
       aria-labelledby="contact-title"
     >
+
+      <div className="branches" id="branches" aria-labelledby="branches-title">
+        <div className="branches-heading">
+          <div className="branches-heading-top">
+            <span>FIND YOUR TRAINING HOME</span>
+            <strong>18 YEARS / 2 LOCATIONS</strong>
+          </div>
+          <h2 id="branches-title">Your strongest routine<br />starts here.</h2>
+          <p>Choose your nearest TANU GYM location and make every session count.</p>
+        </div>
+
+        <div className="branch-grid">
+        {branches.map((branch, index) => (
+          <article className="branch-card" key={branch.name} data-aos="fade-up" data-aos-delay={index * 90}>
+            <div className="branch-image-wrap">
+              <img src={branch.image} alt={`${branch.name} gym interior`} />
+              <span className="branch-label">{branch.label}</span>
+            </div>
+            <div className="branch-content">
+              <h3>{branch.name}</h3>
+              <p className="branch-description">{branch.description}</p>
+              <div className="branch-detail"><FaMapMarkerAlt /><address>{branch.address}</address></div>
+              <div className="branch-detail"><FaClock /><p>{branch.hours}</p></div>
+              <div className="branch-detail"><FaPhoneAlt /><a href={`tel:${branch.phone.replace(/\s/g, "")}`}>{branch.phone}</a></div>
+              <div className="branch-actions"><a className="branch-map" href={branch.maps} target="_blank" rel="noopener noreferrer"><FaMapMarkerAlt /> View on Google Maps</a><a className="branch-whatsapp" href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer"><FaWhatsapp /> WhatsApp</a></div>
+            </div>
+          </article>
+        ))}
+        </div>
+      </div>
 
       <div className="section-title" data-aos="fade-up">
         <span>CONTACT US</span>
@@ -270,33 +302,6 @@ function Contact() {
 
         </form>
 
-      </div>
-
-      <div className="branches" id="branches" aria-labelledby="branches-title">
-        <div className="branches-heading">
-          <span>FIND YOUR TRAINING HOME</span>
-          <h2 id="branches-title">Two branches.<br />One stronger community.</h2>
-          <p>Choose the TANU GYM location that fits your routine and start training with us.</p>
-        </div>
-
-        <div className="branch-grid">
-        {branches.map((branch, index) => (
-          <article className="branch-card" key={branch.name} data-aos="fade-up" data-aos-delay={index * 90}>
-            <div className="branch-image-wrap">
-              <img src={branch.image} alt={`${branch.name} gym interior`} />
-              <span className="branch-label">BRANCH {index + 1}</span>
-            </div>
-            <div className="branch-content">
-              <h3>{branch.name}</h3>
-              <p className="branch-description">{branch.description}</p>
-              <div className="branch-detail"><FaMapMarkerAlt /><address>{branch.address}</address></div>
-              <div className="branch-detail"><FaClock /><p>{branch.hours}</p></div>
-              <div className="branch-detail"><FaPhoneAlt /><a href={`tel:${branch.phone.replace(/\s/g, "")}`}>{branch.phone}</a></div>
-              <div className="branch-actions"><a className="branch-map" href={branch.maps} target="_blank" rel="noopener noreferrer">View on Google Maps</a><a className="branch-whatsapp" href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer"><FaWhatsapp /> WhatsApp</a></div>
-            </div>
-          </article>
-        ))}
-        </div>
       </div>
 
     </section>

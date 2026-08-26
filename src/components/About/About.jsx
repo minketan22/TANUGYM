@@ -21,36 +21,45 @@ function About() {
       aria-labelledby="about-title"
     >
 
-      <div className="about-image">
-        <img
-          src={aboutImage}
-          alt="Personal trainer guiding members through a strength workout at TANU GYM"
-        />
+      <div className="about-visual" data-aos="fade-right">
+        <div className="about-image">
+          <div className="about-image-glow" aria-hidden="true" />
+          <img
+            src={aboutImage}
+            alt="TANU GYM owner standing inside the gym"
+          />
+          <div className="owner-badge">
+            <strong>18</strong>
+            <span>YEARS OF<br />TRUST</span>
+          </div>
+          <div className="owner-caption">
+            <span className="owner-caption-dot" aria-hidden="true" />
+            <span>Built by experience</span>
+          </div>
+        </div>
       </div>
 
       <div className="about-content" data-aos="fade-up">
 
-        <span className="about-subtitle"> 
-          WHY CHOOSE TANU GYM
-        </span>
+        <span className="about-subtitle">THE TANU GYM STORY</span>
 
         <h2 id="about-title">
-          Train Smarter,
+          18 years of
           <br />
-          Become Stronger
+          making strength personal.
         </h2>
 
         <p>
-          TANU GYM was built to make serious fitness welcoming and practical
-          for the Mullana community. From a first workout to a complete
-          transformation, our team pairs expert coaching with a consistent,
-          supportive environment.
+          What started as a passion for better training has grown into a
+          trusted fitness home for the Mullana community. TANU GYM is led by
+          an owner who understands that real progress comes from showing up,
+          training with purpose and feeling supported every step of the way.
         </p>
 
         <p>
-          Our vision is simple: help every member train with purpose, feel
-          stronger and build habits that last. With two branches, we are
-          growing a local fitness community without losing personal attention.
+          Today, our two branches bring expert coaching, modern equipment and
+          a welcoming atmosphere together. Whether you are starting fresh or
+          chasing your next personal best, your journey has a place here.
         </p>
 
         <div className="feature-list">
@@ -62,6 +71,12 @@ function About() {
             </div>
           ))}
 
+        </div>
+
+        <div className="about-proof" aria-label="TANU GYM experience highlights">
+          <div><strong>18+</strong><span>Years established</span></div>
+          <div><strong>2</strong><span>Training locations</span></div>
+          <div><strong>1</strong><span>Strong community</span></div>
         </div>
 
         <Button

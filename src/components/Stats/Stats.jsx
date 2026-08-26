@@ -15,12 +15,12 @@ function Stats() {
     },
     {
          icon: <FaDumbbell />,
-      number: "20+",
+      number: "10+",
       title: "Expert Trainers",
     },
     {
          icon: <FaAward />,
-      number: "15+",
+      number: "18+",
       title: "Years Experience",
     },
     {

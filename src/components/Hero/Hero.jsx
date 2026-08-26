@@ -28,11 +28,26 @@ function Hero() {
         </div>
       </div>
 
-      <div className="hero-image">
-        <img
-          src={heroImage}
-          alt="TANU GYM members training with modern strength and cardio equipment"
-        />
+      <div className="hero-visual" data-aos="fade-left">
+        <div className="hero-image">
+          <div className="hero-image-glow" aria-hidden="true" />
+          <img
+            src={heroImage}
+            alt="TANU GYM members training with modern strength and cardio equipment"
+          />
+          <div className="hero-image-topline">
+            <span className="hero-live-dot" aria-hidden="true" />
+            TRAIN WITH PURPOSE
+          </div>
+          <div className="hero-image-badge">
+            <strong>18</strong>
+            <span>YEARS<br />STRONG</span>
+          </div>
+          <div className="hero-image-caption">
+            <span>Built for your next level</span>
+            <span aria-hidden="true">&#8599;</span>
+          </div>
+        </div>
       </div>
     </section>
   );

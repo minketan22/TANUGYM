@@ -10,7 +10,7 @@ function Testimonials() {
   const testimonials = [
     {
       image: member1,
-      name: "Rahul Sharma",
+      name: "Mehak Sharma",
       duration: "Member for 2 Years",
       review:
         "Joining TANU GYM completely changed my lifestyle. The trainers are supportive and the environment is motivating.",
@@ -18,7 +18,7 @@ function Testimonials() {
     },
     {
       image: member2,
-      name: "Priya Singh",
+      name: "Praveen Singh",
       duration: "Member for 1 Year",
       review:
         "The equipment is modern and the workout plans helped me achieve my fitness goals faster than I expected.",
@@ -26,7 +26,7 @@ function Testimonials() {
     },
     {
       image: member3,
-      name: "Aman Verma",
+      name: "Priya Verma",
       duration: "Member for 3 Years",
       review:
         "Excellent trainers, great atmosphere, and outstanding facilities. I highly recommend this gym.",
