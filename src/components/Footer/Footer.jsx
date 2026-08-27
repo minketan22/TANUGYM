@@ -28,8 +28,6 @@ function Footer() {
       url: "https://www.facebook.com/tanu.gym",
       icon: <FaFacebookF />,
     },
-    { name: "LinkedIn", url: "", icon: <FaLinkedinIn /> },
-    { name: "YouTube", url: "", icon: <FaYoutube /> },
   ];
 
   return (
@@ -49,15 +47,10 @@ function Footer() {
             {socialLinks.map((link) => (
               <a
                 key={link.name}
-                href={link.url || "#"}
+                href={link.url}
                 aria-label={link.name}
-                target={link.url ? "_blank" : undefined}
-                rel={link.url ? "noreferrer" : undefined}
-                onClick={(event) => {
-                  if (!link.url) {
-                    event.preventDefault();
-                  }
-                }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {link.icon}
               </a>

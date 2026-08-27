@@ -4,6 +4,18 @@
   padding: 0 20px;
 }
 
+.contact > .section-title {
+  width: 100%;
+  margin: 72px auto 60px;
+  text-align: center;
+}
+
+.contact > .section-title span,
+.contact > .section-title h2 {
+  display: block;
+  width: 100%;
+}
+
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -124,6 +136,11 @@
 .branch-whatsapp:hover { background: #31c778; color: #101a15; }
 
 @media (max-width: 767px) {
+  .contact > .section-title {
+    margin-top: 56px;
+    margin-bottom: 44px;
+  }
+
   .branches-heading-top { align-items:flex-start; flex-direction:column; gap:8px; }
   .branch-grid { grid-template-columns: 1fr; }
   .branches-heading h2 { font-size: 2rem; }

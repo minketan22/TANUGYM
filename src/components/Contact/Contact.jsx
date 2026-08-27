@@ -248,6 +248,7 @@ function Contact() {
             value={formData.name}
             onChange={handleChange}
             autoComplete="name"
+            required
           />
 
           <label className="sr-only" htmlFor="contact-email">
@@ -262,6 +263,7 @@ function Contact() {
             value={formData.email}
             onChange={handleChange}
             autoComplete="email"
+            required
           />
 
           <label className="sr-only" htmlFor="contact-phone">
@@ -276,6 +278,7 @@ function Contact() {
             value={formData.phone}
             onChange={handleChange}
             autoComplete="tel"
+            required
           />
 
           <label className="sr-only" htmlFor="contact-message">
@@ -289,6 +292,7 @@ function Contact() {
             placeholder="Your Message"
             value={formData.message}
             onChange={handleChange}
+            required
           ></textarea>
 
           {error && <p className="form-message error-message">{error}</p>}

@@ -1,4 +1,3 @@
-import React from "react";
 import "./KidZone.css";
 
 const activities = [
