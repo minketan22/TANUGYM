@@ -1,15 +1,12 @@
 import "./TrainerCard.css";
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaTrophy } from "react-icons/fa";
 
 function TrainerCard({
-  image,
+  number,
   name,
   role,
   experience,
+  description,
   delay = 0,
 }) {
   return (
@@ -18,25 +15,15 @@ function TrainerCard({
       data-aos="fade-up"
       data-aos-delay={delay}
     >
-
-      <img
-        src={image}
-        alt={`${name}, ${role} at TANU GYM`}
-      />
-
-      <h3>{name}</h3>
-
-      <p className="role">{role}</p>
-
-      <p className="experience">
-        {experience}
-      </p>
-      <div className="social-icons" aria-label={`${name} social media profiles`}>
-        <FaInstagram aria-hidden="true" />
-        <FaFacebookF aria-hidden="true" />
-        <FaLinkedinIn aria-hidden="true" />
+      <div className="trainer-card-header">
+        <span className="trainer-number">{number}</span>
+        <FaTrophy aria-hidden="true" />
       </div>
 
+      <h3>{name}</h3>
+      <p className="experience">{experience}</p>
+      <p className="role">{role}</p>
+      <p className="description">{description}</p>
     </article>
   );
 }

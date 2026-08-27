@@ -1,11 +1,48 @@
 .trainers {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 120px auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 .trainers-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.trainers .section-title {
+  max-width: 760px;
+  margin-bottom: 56px;
+}
+
+.trainers .section-title h2 {
+  max-width: 700px;
+}
+
+.trainers .section-title h2 em {
+  color: #ff4d00;
+  font-style: normal;
+}
+
+.trainers .section-title p {
+  max-width: 720px;
+  margin-top: 20px;
+  color: #aeb6c2;
+}
+
+@media (max-width: 1199px) {
+  .trainers-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .trainers {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .trainers-container {
+    grid-template-columns: 1fr;
+  }
 }

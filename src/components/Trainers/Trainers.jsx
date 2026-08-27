@@ -2,29 +2,42 @@ import "./Trainers.css";
 
 import TrainerCard from "../TrainerCard/TrainerCard";
 
-import trainer1 from "../../assets/images/trainer1.png";
-import trainer2 from "../../assets/images/trainer2.png";
-import trainer3 from "../../assets/images/trainer3.png";
-
 function Trainers() {
   const trainers = [
     {
-      image: trainer1,
-      name: "John Smith",
-      role: "Strength Coach",
-      experience: "8 Years Experience",
+      name: "Kartik Singh",
+      role: "Head Trainer",
+      experience: "15+ Years Experience",
+      description:
+        "Leads members through structured strength and conditioning programs with a focus on safe, measurable progress.",
     },
     {
-      image: trainer2,
-      name: "Emma Wilson",
-      role: "Yoga Expert",
-      experience: "6 Years Experience",
+      name: "Prince",
+      role: "Floor Trainer",
+      experience: "10+ Years Experience",
+      description:
+        "Keeps every session focused and effective, helping members build confidence with correct form and consistent effort.",
     },
     {
-      image: trainer3,
-      name: "David Brown",
-      role: "Cardio Coach",
-      experience: "10 Years Experience",
+      name: "Ujjwal Pandey",
+      role: "Trainer",
+      experience: "6+ Years Experience",
+      description:
+        "Supports members with practical training guidance for strength, conditioning, and sustainable fitness habits.",
+    },
+    {
+      name: "Harsh",
+      role: "Receptionist",
+      experience: "5+ Years Experience",
+      description:
+        "Welcomes every member, coordinates the daily gym experience, and keeps your training journey running smoothly.",
+    },
+    {
+      name: "Krishan",
+      role: "Head Trainer · Saha Branch",
+      experience: "15+ Years Experience",
+      description:
+        "Guides the Saha branch with disciplined coaching, personalized support, and a clear focus on long-term results.",
     },
   ];
 
@@ -39,20 +52,25 @@ function Trainers() {
         <span>OUR TRAINERS</span>
 
         <h2 id="trainers-title">
-          Meet Our
+          Train With <em>Experienced</em> Fitness
           <br />
-          Expert Coaches
+          Professionals
         </h2>
+        <p>
+          Every trainer at TANU GYM brings practical experience and focused
+          guidance to help members train safely, effectively, and confidently.
+        </p>
       </div>
 
       <div className="trainers-container">
         {trainers.map((trainer, index) => (
           <TrainerCard
             key={trainer.name}
-            image={trainer.image}
+            number={String(index + 1).padStart(2, "0")}
             name={trainer.name}
             role={trainer.role}
             experience={trainer.experience}
+            description={trainer.description}
             delay={index * 90}
           />
         ))}

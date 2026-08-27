@@ -1,53 +1,65 @@
 .trainer-card {
+  min-height: 360px;
+  padding: 30px 30px 28px;
+  border: 1px solid #353e4b;
   background: #1b222c;
-  border-radius: 18px;
-  overflow: hidden;
-  text-align: center;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .trainer-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(255, 98, 0, 0.2);
+  transform: translateY(-6px);
+  border-color: #ff6a00;
+  background: #242d3a;
 }
 
-.trainer-card img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
+.trainer-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.trainer-card-header svg {
+  color: #ff6a00;
+  font-size: 1.25rem;
+}
+
+.trainer-number {
+  color: #8a4319;
+  font-size: 2.9rem;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .trainer-card h3 {
-  color: white;
-  margin-top: 20px;
-  font-size: 1.5rem;
-}
-
-.role {
-  color: #ff6a00;
-  margin: 10px 0;
-  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .experience {
-  color: #bdbdbd;
-  margin-bottom: 25px;
-}
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  margin-bottom: 25px;
-}
-
-.social-icons svg {
-  font-size: 1.2rem;
-  color: #ffffff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.social-icons svg:hover {
+  margin-top: 8px;
   color: #ff6a00;
-  transform: translateY(-3px);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.role {
+  margin-top: 12px;
+  color: #d1d5db;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.description {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid #353e4b;
+  color: #bdbdbd;
+  font-size: 0.84rem;
+  line-height: 1.65;
 }
