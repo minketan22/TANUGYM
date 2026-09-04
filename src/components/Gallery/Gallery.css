@@ -64,7 +64,8 @@
 
   .gallery-card img,
   .gallery-card video {
-    height: 160px;
+    height: auto;
+    aspect-ratio: 4 / 3;
   }
 
   .gallery-card:hover {

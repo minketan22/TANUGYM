@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 function Hero() {
   return (
-    <section id="home" className="hero" aria-labelledby="hero-title">
+    <section id="home" className="hero" data-aos="fade-up" aria-labelledby="hero-title">
       <div className="hero-content">
         <p className="hero-kicker">Your fitness journey starts here</p>
 

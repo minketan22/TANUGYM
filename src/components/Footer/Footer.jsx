@@ -31,7 +31,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="footer">
+    <footer className="footer" data-aos="fade-up">
       <div className="footer-container">
         <div className="footer-brand">
           <div className="footer-brand-lockup">

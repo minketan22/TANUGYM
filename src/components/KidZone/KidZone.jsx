@@ -34,7 +34,7 @@ const benefits = [
 
 function KidZone() {
   return (
-    <section className="kidzone" id="kidzone">
+    <section className="kidzone" id="kidzone" data-aos="fade-up">
       <div className="kidzone-container">
 
         {/* Header */}

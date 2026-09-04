@@ -6,9 +6,10 @@ import gallery3 from "../../assets/images/gallery3.jpg";
 import gallery4 from "../../assets/images/gallery4.jpg";
 import gallery5 from "../../assets/images/gallery5.jpg";
 import gallery6 from "../../assets/images/gallery6.jpg";
-import galleryVideo1 from "../../assets/videos/Gallery1.mp4";
-import galleryVideo2 from "../../assets/videos/Gallery2.mp4";
-import branchMullanaVideo from "../../assets/videos/GymBranchMullana.MP4";
+import galleryVideo1 from "../../assets/videos/gallery1.mp4";
+import galleryVideo2 from "../../assets/videos/gallery2.mp4";
+import galleryVideo3 from "../../assets/videos/gallery3.mp4";
+import galleryVideo4 from "../../assets/videos/gallery4.mp4";
 import branchSahaVideo from "../../assets/videos/GymBranchSaha.mp4";
 
 function Gallery() {
@@ -56,8 +57,13 @@ function Gallery() {
     },
     {
       type: "video",
-      src: branchMullanaVideo,
-      alt: "TANU GYM Mullana training floor",
+      src: galleryVideo3,
+      alt: "Cardio training at TANU GYM",
+    },
+    {
+      type: "video",
+      src: galleryVideo4,
+      alt: "Group workout at TANU GYM",
     },
     {
       type: "video",
@@ -91,8 +97,9 @@ function Gallery() {
           <div
             className="gallery-card"
             key={item.alt}
-            data-aos="zoom-in-up"
+            data-aos="fade-up"
             data-aos-delay={index * 70}
+            data-aos-duration="700"
           >
             {item.type === "video" ? (
               <video
