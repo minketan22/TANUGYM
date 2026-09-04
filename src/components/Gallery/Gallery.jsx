@@ -6,33 +6,63 @@ import gallery3 from "../../assets/images/gallery3.jpg";
 import gallery4 from "../../assets/images/gallery4.jpg";
 import gallery5 from "../../assets/images/gallery5.jpg";
 import gallery6 from "../../assets/images/gallery6.jpg";
+import galleryVideo1 from "../../assets/videos/Gallery1.mp4";
+import galleryVideo2 from "../../assets/videos/Gallery2.mp4";
+import branchMullanaVideo from "../../assets/videos/GymBranchMullana.MP4";
+import branchSahaVideo from "../../assets/videos/GymBranchSaha.mp4";
 
 function Gallery() {
 
-  const images = [
+  const media = [
     {
+      type: "image",
       src: gallery1,
       alt: "TANU GYM gym floor with modern resistance machines",
     },
     {
+      type: "image",
       src: gallery2,
       alt: "Members training with free weights at TANU GYM",
     },
     {
+      type: "image",
       src: gallery3,
       alt: "Cardio workout area inside TANU GYM gym",
     },
     {
+      type: "image",
       src: gallery4,
       alt: "Strength training session led by a coach at TANU GYM",
     },
     {
+      type: "image",
       src: gallery5,
       alt: "Functional fitness space for group workouts at TANU GYM",
     },
     {
+      type: "image",
       src: gallery6,
       alt: "Clean and spacious workout environment at TANU GYM gym",
+    },
+    {
+      type: "video",
+      src: galleryVideo1,
+      alt: "Training session at TANU GYM",
+    },
+    {
+      type: "video",
+      src: galleryVideo2,
+      alt: "Strength workout at TANU GYM",
+    },
+    {
+      type: "video",
+      src: branchMullanaVideo,
+      alt: "TANU GYM Mullana training floor",
+    },
+    {
+      type: "video",
+      src: branchSahaVideo,
+      alt: "TANU GYM Saha training floor",
     },
   ];
 
@@ -56,18 +86,32 @@ function Gallery() {
 
       <div className="gallery-container">
 
-        {images.map((image, index) => (
+        {media.map((item, index) => (
 
           <div
             className="gallery-card"
-            key={image.alt}
+            key={item.alt}
             data-aos="zoom-in-up"
             data-aos-delay={index * 70}
           >
-            <img
-              src={image.src}
-              alt={image.alt}
-            />
+            {item.type === "video" ? (
+              <video
+                src={item.src}
+                aria-label={item.alt}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              />
+            ) : (
+              <img
+                src={item.src}
+                alt={item.alt}
+                loading="lazy"
+                decoding="async"
+              />
+            )}
           </div>
 
         ))}

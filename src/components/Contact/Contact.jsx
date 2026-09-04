@@ -10,6 +10,8 @@ import {
 } from "react-icons/fa";
 import branchMainImage from "../../assets/images/gallery5.jpg";
 import branchSecondImage from "../../assets/images/gallery6.jpg";
+import branchMullanaVideo from "../../assets/videos/GymBranchMullana.MP4";
+import branchSahaVideo from "../../assets/videos/GymBranchSaha.mp4";
 
 const WHATSAPP_NUMBER = "918950855815"; // WhatsApp expects the number without '+' or spaces
 
@@ -39,7 +41,12 @@ const branches = [
     label: "BRANCH 2",
     phone: contactDetails.phone,
     hours: contactDetails.hours,
-    image: branchMainImage,
+    media: {
+      type: "video",
+      src: branchMullanaVideo,
+      alt: "TANU GYM Mullana training floor",
+      poster: branchMainImage,
+    },
     description: "Our flagship training floor with expert coaching and a focused community.",
   },
   {
@@ -49,7 +56,12 @@ const branches = [
     label: "BRANCH 3",
     phone: contactDetails.phone,
     hours: contactDetails.hours,
-    image: branchSecondImage,
+    media: {
+      type: "video",
+      src: branchSahaVideo,
+      alt: "TANU GYM Saha training floor",
+      poster: branchSecondImage,
+    },
     description: "A convenient TANU GYM space designed to keep your training consistent.",
   },
 ];
@@ -144,7 +156,20 @@ function Contact() {
         {branches.map((branch, index) => (
           <article className="branch-card" key={branch.name} data-aos="fade-up" data-aos-delay={index * 90}>
             <div className="branch-image-wrap">
-              <img src={branch.image} alt={`${branch.name} gym interior`} />
+              {branch.media.type === "video" ? (
+                <video
+                  src={branch.media.src}
+                  aria-label={branch.media.alt}
+                  poster={branch.media.poster}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                />
+              ) : (
+                <img src={branch.media.src} alt={branch.media.alt} />
+              )}
               <span className="branch-label">{branch.label}</span>
             </div>
             <div className="branch-content">

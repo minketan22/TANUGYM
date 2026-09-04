@@ -116,8 +116,8 @@
 .branch-card:hover { transform: translateY(-12px) rotateX(2deg) rotateY(-2deg); border-color: rgba(255, 106, 0, 0.7); box-shadow: 12px 24px 0 rgba(9, 12, 16, .3), 0 30px 55px rgba(255,106,0,.14); }
 .branch-image-wrap { position: relative; height: 235px; overflow: hidden; }
 .branch-image-wrap::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(10, 13, 17, 0.78)); }
-.branch-image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-.branch-card:hover .branch-image-wrap img { transform: scale(1.05); }
+.branch-image-wrap img, .branch-image-wrap video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.branch-card:hover .branch-image-wrap img, .branch-card:hover .branch-image-wrap video { transform: scale(1.05); }
 .branch-image-wrap .branch-label { position: absolute; z-index: 1; bottom: 18px; left: 22px; color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; }
 .branch-content { position:relative; z-index:3; padding: 27px 28px 30px; }
 .branch-card h3 { margin: 0; color: #fff; font-size: 1.4rem; }

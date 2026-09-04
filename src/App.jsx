@@ -26,24 +26,12 @@ function App() {
 
     AOS.init({
       duration: 1000,
-      once: false,
+      once: true,
       easing: "ease-in-out",
       disable: prefersReducedMotion,
     });
 
-    const refreshAnimations = () => AOS.refreshHard();
-
-    window.addEventListener("load", refreshAnimations);
-    window.addEventListener("resize", refreshAnimations);
-    window.addEventListener("orientationchange", refreshAnimations);
-
     AOS.refresh();
-
-    return () => {
-      window.removeEventListener("load", refreshAnimations);
-      window.removeEventListener("resize", refreshAnimations);
-      window.removeEventListener("orientationchange", refreshAnimations);
-    };
   }, []);
 
   return (
