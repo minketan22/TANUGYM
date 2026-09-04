@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import branchMainImage from "../../assets/images/gallery5.jpg";
 import branchSecondImage from "../../assets/images/gallery6.jpg";
-import branchMullanaVideo from "../../assets/videos/GymBranchMullana.mp4";
+import branchMullanaVideo from "../../assets/videos/GymBranchMullana.MP4";
 
 const WHATSAPP_NUMBER = "918950855815"; // WhatsApp expects the number without '+' or spaces
 
