@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import logoImage from "../../assets/logo.png";
 
 const seoConfig = {
   title: "TANU GYM | Luxury. Strength. Discipline.",
@@ -57,7 +56,7 @@ function SeoManager() {
 
     const canonicalUrl = currentUrl.toString();
     const siteOrigin = currentUrl.origin;
-    const imageUrl = new URL(logoImage, siteOrigin).toString();
+    const imageUrl = new URL("/logo.png", siteOrigin).toString();
 
     document.documentElement.lang = "en-IN";
     document.title = seoConfig.title;

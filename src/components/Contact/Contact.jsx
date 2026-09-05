@@ -8,9 +8,7 @@ import {
   FaClock,
   FaWhatsapp,
 } from "react-icons/fa";
-import branchMainImage from "../../assets/images/gallery5.jpg";
-import branchSecondImage from "../../assets/images/gallery6.jpg";
-import branchMullanaVideo from "../../assets/videos/GymBranchMullana.MP4";
+import branchMullanaImage from "../../assets/images/MullanaBranch.jpg";
 
 const WHATSAPP_NUMBER = "918950855815"; // WhatsApp expects the number without '+' or spaces
 
@@ -41,25 +39,23 @@ const branches = [
     phone: contactDetails.phone,
     hours: contactDetails.hours,
     media: {
-      type: "video",
-      src: branchMullanaVideo,
+      type: "image",
+      src: branchMullanaImage,
       alt: "TANU GYM Mullana training floor",
-      poster: branchMainImage,
     },
     description: "Our flagship training floor with expert coaching and a focused community.",
   },
   {
     name: "TANU GYM SAHA",
-    address: "Contact our team for the latest branch address and availability.",
+    address: "7XW9+XF4, Saha, Haryana, 133104",
     maps: "https://www.google.com/maps/place/30%C2%B017'51.4%22N+76%C2%B058'07.4%22E/@30.2976074,76.966137,769m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d30.2976074!4d76.9687119?hl=en&entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D",
     label: "BRANCH 3",
     phone: contactDetails.phone,
     hours: contactDetails.hours,
     media: {
-      type: "video",
-      src: branchMullanaVideo,
+      type: "image",
+      src: branchMullanaImage,
       alt: "TANU GYM Saha training floor",
-      poster: branchSecondImage,
     },
     description: "A convenient TANU GYM space designed to keep your training consistent.",
   },
@@ -155,20 +151,7 @@ function Contact() {
         {branches.map((branch, index) => (
           <article className="branch-card" key={branch.name} data-aos="fade-up" data-aos-delay={index * 90}>
             <div className="branch-image-wrap">
-              {branch.media.type === "video" ? (
-                <video
-                  src={branch.media.src}
-                  aria-label={branch.media.alt}
-                  poster={branch.media.poster}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                />
-              ) : (
-                <img src={branch.media.src} alt={branch.media.alt} />
-              )}
+              <img src={branch.media.src} alt={branch.media.alt} />
               <span className="branch-label">{branch.label}</span>
             </div>
             <div className="branch-content">

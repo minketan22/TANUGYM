@@ -6,11 +6,6 @@ import gallery3 from "../../assets/images/gallery3.jpg";
 import gallery4 from "../../assets/images/gallery4.jpg";
 import gallery5 from "../../assets/images/gallery5.jpg";
 import gallery6 from "../../assets/images/gallery6.jpg";
-import galleryVideo1 from "../../assets/videos/Gallery1.mp4";
-import galleryVideo2 from "../../assets/videos/Gallery2.mp4";
-import galleryVideo3 from "../../assets/videos/gallery3.mp4";
-import galleryVideo4 from "../../assets/videos/gallery4.mp4";
-import branchSahaVideo from "../../assets/videos/GymBranchSaha.mp4";
 
 function Gallery() {
 
@@ -45,31 +40,6 @@ function Gallery() {
       src: gallery6,
       alt: "Clean and spacious workout environment at TANU GYM gym",
     },
-    {
-      type: "video",
-      src: galleryVideo1,
-      alt: "Training session at TANU GYM",
-    },
-    {
-      type: "video",
-      src: galleryVideo2,
-      alt: "Strength workout at TANU GYM",
-    },
-    {
-      type: "video",
-      src: galleryVideo3,
-      alt: "Cardio training at TANU GYM",
-    },
-    {
-      type: "video",
-      src: galleryVideo4,
-      alt: "Group workout at TANU GYM",
-    },
-    {
-      type: "video",
-      src: branchSahaVideo,
-      alt: "TANU GYM Saha training floor",
-    },
   ];
 
   return (
@@ -101,24 +71,12 @@ function Gallery() {
             data-aos-delay={index * 70}
             data-aos-duration="700"
           >
-            {item.type === "video" ? (
-              <video
-                src={item.src}
-                aria-label={item.alt}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-              />
-            ) : (
-              <img
-                src={item.src}
-                alt={item.alt}
-                loading="lazy"
-                decoding="async"
-              />
-            )}
+            <img
+              src={item.src}
+              alt={item.alt}
+              loading="lazy"
+              decoding="async"
+            />
           </div>
 
         ))}

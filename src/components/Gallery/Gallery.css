@@ -19,8 +19,7 @@
   
 }
 
-.gallery-card img,
-.gallery-card video {
+.gallery-card img {
   width: 100%;
   height: 280px;
   object-fit: cover;
@@ -29,8 +28,7 @@
   
 }
 
-.gallery-card:hover img,
-.gallery-card:hover video {
+.gallery-card:hover img {
   transform: scale(1.1);
 }
 
@@ -62,8 +60,7 @@
     border-radius: 12px;
   }
 
-  .gallery-card img,
-  .gallery-card video {
+  .gallery-card img {
     height: auto;
     aspect-ratio: 4 / 3;
   }
